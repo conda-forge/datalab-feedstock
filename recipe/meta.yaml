@@ -1,5 +1,5 @@
 {% set name = "DataLab" %}
-{% set version = "0.17.0" %}
+{% set version = "0.17.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/c/cdl/cdl-{{ version }}.tar.gz
-  sha256: f5457d31ae9a7db5fc7997768167f9f789a783ecd43d4fc468f594147ae44227
+  sha256: c61347af194a99ee8e1516cd3c938373435250fb7f1620b07e2eeba79251bdd1
 
 build:
   noarch: python
