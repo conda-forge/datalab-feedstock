@@ -48,6 +48,10 @@ test:
 about:
   summary: DataLab (CDL) is a data processing and analysis software for scientific and industrial applications
   home: https://datalab-platform.com/
+  description: |
+    DataLab is an open-source platform for signal and image processing and visualization for research, education and industry. 
+    Leveraging the richness of the scientific Python ecosystem, DataLab is the ideal complement to your data analysis workflows 
+    as it can be extended with your Python code through plugins or directly from your IDE or your Jupyter notebooks.
   doc_url: https://datalab-platform.com/
   license: BSD-3-Clause
   license_file: LICENSE
