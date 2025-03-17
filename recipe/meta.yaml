@@ -28,7 +28,7 @@ requirements:
     - python >={{ python_min }}
     - guidata >=3.7
     - plotpy >=2.7
-    - scipy >=1.5
+    - scipy >=1.5,<1.15.0
     - scikit-image >=0.18
     - opencv >=4.5
     - pandas >=1.2
