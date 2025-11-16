@@ -1,22 +1,21 @@
 {% set name = "DataLab" %}
-{% set version = "0.20.1" %}
+{% set version = "1.0.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/c/cdl/cdl-{{ version }}.tar.gz
-  sha256: 6f4fed18b047bd1622220c012c83b38dfee8c07adad7057569ed3e6acb3c6361
+  url: https://pypi.org/packages/source/d/datalab_platform/datalab_platform-{{ version }}.tar.gz
+  sha256: 8e4517af2c7912f0750371ab83b20db260c348339583257d46b8bb52dd241b85
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   entry_points:
-    - cdl = cdl.app:run
-    - datalab = cdl.app:run
-    - datalab-demo = cdl.tests.scenarios.demo:run
-    - datalab-tests = cdl.tests:run
+    - datalab = datalab.app:run
+    - datalab-demo = datalab.tests.scenarios.demo:run
+    - datalab-tests = datalab.tests:run
   number: 0
 
 requirements:
@@ -26,18 +25,19 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - guidata >=3.7
-    - plotpy >=2.7
-    - scipy >=1.5,<1.15.0
-    - scikit-image >=0.18
+    - guidata >=3.13.3
+    - plotpy >=2.8.2
+    - sigima >=1.0.2
+    - scipy >=1.10.1
+    - scikit-image >=0.19.2
     - opencv >=4.5
-    - pandas >=1.2
-    - pywavelets >=1.1
-    - psutil >=5.7
+    - pandas >=1.4
+    - pywavelets >=1.2
+    - psutil >=5.8
 
 test:
   imports:
-    - cdl
+    - datalab
   commands:
     - pip check
   requires:
@@ -45,7 +45,7 @@ test:
     - python {{ python_min }}
 
 about:
-  summary: DataLab (CDL) is a data processing and analysis software for scientific and industrial applications
+  summary: DataLab is a data processing and analysis software for scientific and industrial applications
   home: https://datalab-platform.com/
   description: |
     DataLab is an open-source platform for signal and image processing and visualization for research, education and industry. 
