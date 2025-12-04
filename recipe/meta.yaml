@@ -1,5 +1,5 @@
 {% set name = "DataLab" %}
-{% set version = "1.0.1" %}
+{% set version = "1.0.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/d/datalab_platform/datalab_platform-{{ version }}.tar.gz
-  sha256: 11355efa8be9dcf31040b5914dd9bb372859021db91a0c6c6780dd4e5d4926bb
+  sha256: 532edfd68f2702d4989816ad86f60e037a8fccc5bab35218c6f61e6022825e06
 
 build:
   noarch: python
