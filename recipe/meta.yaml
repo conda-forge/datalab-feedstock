@@ -1,5 +1,5 @@
 {% set name = "DataLab" %}
-{% set version = "1.0.3" %}
+{% set version = "1.0.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/d/datalab_platform/datalab_platform-{{ version }}.tar.gz
-  sha256: 51b11c07e998edefa2cb027c4559fdaa0594744e9df6814b9bc64bc989c39433
+  sha256: eeefbc10d76ac9e5729a1ad1cf3c10d11f26a949a02d5ce9642983abc13f3cef
 
 build:
   noarch: python
@@ -25,14 +25,14 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - guidata >=3.13.3
+    - guidata >=3.13.4
     - plotpy >=2.8.2
-    - sigima >=1.0.2
-    - scipy >=1.10.1
-    - scikit-image >=0.19.2
-    - opencv >=4.5
-    - pandas >=1.4
-    - pywavelets >=1.2
+    - sigima >=1.0.6
+    - numpy >=1.22,<2.5
+    - scipy >=1.10.1,<1.17
+    - scikit-image >=0.19.2,<0.27
+    - pandas >=1.4,<3.0
+    - pywavelets >=1.2,<2.0
     - psutil >=5.8
 
 test:
