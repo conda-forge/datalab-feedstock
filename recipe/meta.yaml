@@ -34,6 +34,9 @@ requirements:
     - pandas >=1.4,<3.0
     - pywavelets >=1.2,<2.0
     - psutil >=5.8
+    - fastapi
+    - uvicorn
+    - pydantic
 
 test:
   imports:
