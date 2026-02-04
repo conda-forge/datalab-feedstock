@@ -43,9 +43,13 @@ test:
     - datalab
   commands:
     - pip check
+    - QT_QPA_PLATFORM=offscreen pytest --collect-only datalab/tests/
   requires:
     - pip
     - python {{ python_min }}
+    - pytest
+    - httpx
+    - pyqt
 
 about:
   summary: DataLab is a data processing and analysis software for scientific and industrial applications
