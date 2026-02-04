@@ -43,7 +43,7 @@ test:
     - datalab
   commands:
     - pip check
-    - QT_QPA_PLATFORM=offscreen pytest --collect-only datalab/tests/
+    - QT_QPA_PLATFORM=offscreen pytest --collect-only --pyargs datalab.tests
   requires:
     - pip
     - python {{ python_min }}
