@@ -25,9 +25,10 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - guidata >=3.14.4
-    - plotpy >=2.10.0
-    - sigima >=1.1.6
+    - guidata >=3.15.1
+    - plotpy >=2.11.0
+    - sigima >=1.2.0
+    - sigimax >=1.0.2
     - numpy >=1.22,<2.5
     - scipy >=1.10.1,<1.17
     - scikit-image >=0.19.2,<0.27
