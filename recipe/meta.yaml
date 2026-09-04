@@ -1,13 +1,13 @@
 {% set name = "DataLab" %}
-{% set version = "1.2.2" %}
+{% set version = "1.3.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/d/datalab_platform/datalab_platform-{{ version }}.tar.gz
-  sha256: 3cf76c3245b03a7544b07653b6bed2a0256b2bbbe5d58072dbdc6e627eb535d0
+  url: https://files.pythonhosted.org/packages/source/d/datalab_platform/datalab_platform-{{ version }}.tar.gz
+  sha256: e8faac5b325b1c12e08c309caee2a3febaf9fe7bc63d22fd0e22a80ef716adf6
 
 build:
   noarch: python
@@ -25,15 +25,18 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - guidata >=3.14.4
-    - plotpy >=2.10.0
-    - sigima >=1.1.6
+    - guidata >=3.15.1
+    - plotpy >=2.11.0
+    - sigima >=1.2.0
+    - sigimax >=1.0.2
     - numpy >=1.22,<2.5
     - scipy >=1.10.1,<1.17
     - scikit-image >=0.19.2,<0.27
     - pandas >=1.4,<3.1
     - pywavelets >=1.2,<2.0
     - psutil >=5.8
+    - packaging >=21.3
+    - jedi >=0.18.2
     - fastapi
     - uvicorn
     - pydantic
